@@ -1,0 +1,237 @@
+<!--travel_packages.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Packages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #1693e1;
+        }
+
+        main {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            color: #003366;
+        }
+
+        .package-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .package-box {
+            background-color: white;
+            padding: 1.5rem;
+            width: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .package-box img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .package-box h3 {
+            color: #003366;
+        }
+
+        .package-box p {
+            color: #777;
+            font-size: 16px;
+            margin-bottom: 1rem;
+        }
+
+        .package-box a {
+            background-color: #1693e1;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .package-box a:hover {
+            background-color: #03182b;
+        }
+
+        .booking-form {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            width: 400px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container input,
+        .form-container select,
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            background-color: #1693e1;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .form-container button:hover {
+            background-color: #03182b;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ff0000;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #003366;
+            color: white;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Travel Packages</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="travel_packages.html">Travel Packages</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Explore Our Best Travel Packages</h2>
+        
+        <div class="package-container">
+            <!--package1-->
+            <div class="package-box">
+                <img src="city.jpg" alt="Package 1">
+                <h3>Kolkata</h3>
+                <p>Explore City of JOy with our exclusive Golden Triangle tour package. Visit iconic landmarks like the Howrah Bridge, Eden Gardens and more!</p>
+                <a href="index.html">Book Now</a>
+            </div>
+
+            <!-- Package2 -->
+            <div class="package-box">
+                <img src="kashmir.webp" alt="Package 2">
+                <h3>Kashmir</h3>
+                <p>Kashmir, the 'Paradise on Earth,' offers breathtaking landscapes, serene lakes, and snow-capped mountains, making it a must-visit destination.</p>
+                <a href="index.html">Book Now</a>
+            </div>
+
+            <!-- Package3 -->
+            <div class="package-box">
+                <img src="India-gate.jpeg" alt="Package 3">
+                <h3>Delhi</h3>
+                <p>Built in 1924, this historic archway stands proudly overlooking the Arabian Sea and is one of Delhi’s most iconic landmarks.</p>
+                <a href="index.html">Book Now</a>
+            </div>
+
+            <!--4-->
+            <div class="package-box">
+                <img src="pune.jpg" alt="Package 3">
+                <h3>Pune</h3>
+                <p>Pune, the "Oxford of the East," is a cultural and educational hub in Maharashtra. Known for its history, greenery, and thriving IT industry, it blends tradition and modernity seamlessly.</p>
+                <a href="index.html">Book Now</a>
+            </div>
+
+            <!--5-->
+            <div class="package-box">
+                <img src="goa.jpg" alt="Package 3">
+                <h3>Goa</h3>
+                <p>Goa, India’s smallest state, is famed for its stunning beaches, vibrant nightlife, and Portuguese heritage. Known for tourism, spice plantations, and festivals, it blends culture and natural beauty.</p>
+                <a href="index.html">Book Now</a>
+            </div>
+
+            <!--6-->
+            <div class="package-box">
+                <img src="goa.jpg" alt="Package 3">
+                <h3>Bengaluru</h3>
+                <p>Bengaluru, also known as Bangalore, is India's tech capital, renowned for its thriving IT industry, vibrant culture, and pleasant climate. It is a hub for innovation, education, and diverse cuisine.</p>
+                <a href="index.html">Book Now</a>
+            </div>
+
+        </div>
+</body>
+</html>

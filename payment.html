@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .buttons button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+        }
+
+        #payButton {
+            background-color: green;
+            color: white;
+        }
+
+        #cancelButton {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Scan & Pay</h2>
+    <p>Click "Proceed to Pay" to open the scanner.</p>
+
+    <div class="buttons">
+        <button id="payButton">Proceed to Pay</button>
+        <button id="cancelButton">Cancel Payment</button>
+    </div>
+
+    <script>
+        document.getElementById("payButton").addEventListener("click", function() {
+            window.location.href = "qr-scanner.html"; // Open scanner full-screen
+        });
+
+        document.getElementById("cancelButton").addEventListener("click", function() {
+            window.location.href = "index.html"; // Redirect to home page
+        });
+    </script>
+</body>
+</html>

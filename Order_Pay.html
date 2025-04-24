@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Choose Payment Method</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .button {
+            padding: 15px 30px;
+            margin: 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        #qrSection {
+            display: none;
+            margin-top: 30px;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Select Payment Method</h1>
+
+    <button class="button" onclick="showQR()">Pay Using QR</button>
+    <button class="button" onclick="payWithCash()">Pay Using Cash</button>
+
+    <div id="qrSection">
+        <h2>Scan to Pay</h2>
+        <img src="qr-code.jpg" alt="QR Code">
+        <br><br>
+        <button class="button" onclick="confirmQRPayment()">Payment Done</button>
+    </div>
+
+    <script>
+        function showQR() {
+            document.getElementById("qrSection").style.display = "block";
+        }
+
+        function confirmQRPayment() {
+            window.location.href = "food.html"; // Redirect to order page
+        }
+
+        function payWithCash() {
+            window.location.href = "food.html"; // Redirect to order page
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!--contact.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #1693e1;
+        }
+
+        main {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            color: #003366;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+            text-align: left;
+        }
+
+        .contact-info div {
+            margin-right: 3rem;
+        }
+
+        .contact-info h2 {
+            color: #003366;
+        }
+
+        .contact-info ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-info ul li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .contact-form {
+            background-color: white;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: #1693e1;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #03182b;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #003366;
+            color: white;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        .external-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+            text-align: left;
+        }
+
+        .external-links div {
+            width: 45%;
+        }
+
+        .external-links a {
+            color: #1693e1;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .external-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .external-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .external-links div {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="logout.html">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Get in Touch</h2>
+
+        <div class="contact-info">
+            <div>
+                <h2>Contact Numbers</h2>
+                <ul>
+                    <li>+91 123 456 7890</li>
+                    <li>+91 987 654 3210</li>
+                    <li>+91 555 123 4567</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Email Us</h2>
+                <ul>
+                    <li><a href="mailto:service1@gmail.com">service1@gmail.com</a></li>
+                    <li><a href="mailto:service2@gmail.com">service2@gmail.com</a></li>
+                    <li><a href="mailto:service3@gmail.com">service3@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h3>Or, leave us a message:</h3>
+            <form action="submit_form.php" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="external-links">
+            <div>
+                <h2>Official IRCTC Links</h2>
+                <ul>
+                    <li><a href="https://www.irctc.co.in/nget/" target="_blank">IRCTC Official Website</a></li>
+                    <li><a href="https://play.google.com/store/apps/details?id=com.irctc.android" target="_blank">Download IRCTC Android App</a></li>
+                    <li><a href="https://apps.apple.com/in/app/irctc-rail-connect/id963522220" target="_blank">Download IRCTC iOS App</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>IRCTC Services:</h3>
+                <ul>
+                    <li><a href="https://www.irctc.co.in/nget/train-search" target="_blank">Train Ticket Booking</a></li>
+                    <li><a href="https://www.irctc.co.in/nget/train-reservation" target="_blank">Train Reservation Assistance</a></li>
+                    <li><a href="https://www.irctc.co.in/nget/holidaypackages" target="_blank">Holiday Packages</a></li>
+                    <li><a href="https://www.irctc.co.in/nget/catering" target="_blank">Catering Services</a></li>
+                    <li><a href="https://www.irctc.co.in/nget/online-tourism" target="_blank">Tourism Services</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Train Ticket Booking System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

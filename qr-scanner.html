@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Scanner</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+        }
+
+        .notice {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #444;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .buttons button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+        }
+
+        #doneButton {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Scan QR Code</h2>
+    <p>Please scan the QR code below to complete your payment.</p>
+
+    <img src="qr-code.jpg" alt="QR Code for Payment">
+
+    <p class="notice">Click "Payment Done" after completing the payment.</p>
+
+    <div class="buttons">
+        <button id="doneButton">Payment Done</button>
+    </div>
+
+    <script>
+        document.getElementById("doneButton").addEventListener("click", function() {
+            const ticket = JSON.parse(localStorage.getItem("ticketDetails"));
+    
+            if (ticket) {
+                const paymentKey = `${ticket.trainName}_${ticket.contact}_${ticket.date}`;
+                localStorage.setItem(`payment_${paymentKey}`, "true"); // Store payment status
+                localStorage.setItem("paymentStatus", "true");
+                window.location.href = "ticket.html"; // Redirect to ticket page
+            } else {
+                alert("No ticket data found. Please start the booking again.");
+                window.location.href = "index.html";
+            }
+        });
+    </script>    
+</body>
+</html>

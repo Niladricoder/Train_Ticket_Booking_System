@@ -1,0 +1,204 @@
+<!--services.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; 
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #1693e1;
+        }
+
+        main {
+            flex: 1; 
+            padding: 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            color: #003366;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            font-size: 18px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .service-box {
+            background-color: white;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #003366;
+            color: white;
+            padding: 1rem;
+            margin-top: 20px;
+        }
+
+        .btn {
+            background-color: #1693e1;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #03182b;
+        }
+
+        .service-box h3 {
+            color: #003366;
+        }
+
+        .service-box p {
+            color: #777;
+            font-size: 16px;
+        }
+
+        .service-box ul {
+            padding-left: 20px;
+            text-align: left;
+            font-size: 16px;
+        }
+
+        .service-box ul li {
+            margin-bottom: 8px;
+        }
+
+        .featured-service {
+            background-color: #e9f7ff;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Train Ticket Booking Services</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="logout.html">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Our Services</h2>
+        
+        <div class="service-box">
+            <h3>Train Ticket Booking</h3>
+            <p>We provide easy and convenient train ticket booking services for multiple routes across the country. Book your tickets online without any hassle.</p>
+            <ul>
+                <li>Book tickets in advance or for immediate travel</li>
+                <li>Choose from a variety of trains and classes</li>
+                <li>Quick booking process with secure payment options</li>
+            </ul>
+            <a href="index.html" class="btn">Book Now</a>
+        </div>
+
+        <div class="service-box">
+            <h3>Train Reservation Assistance</h3>
+            <p>Our team helps you with reserving your train tickets, whether you need a confirmed seat or just general queries about train schedules.</p>
+            <ul>
+                <li>Assistance in seat reservation</li>
+                <li>Handling waitlisted tickets</li>
+                <li>Provide guidance on train routes</li>
+            </ul>
+            <a href="reservation_assistance.html" class="btn">Get Assistance</a>
+        </div>
+
+        <div class="service-box">
+            <h3>Customer Support</h3>
+            <p>Need help with your booking or want to ask about a specific train route? Our dedicated support team is here to assist you 24/7.</p>
+            <ul>
+                <li>24/7 helpline for queries</li>
+                <li>Help with cancellations, refunds, and modifications</li>
+                <li>Special assistance for elderly and differently-abled passengers</li>
+            </ul>
+            <a href="contact.html" class="btn">Contact Us</a>
+        </div>
+
+        <div class="service-box">
+            <h3>Travel Packages</h3>
+            <p>We offer curated travel packages including train tickets, accommodations, and sightseeing tours for an unforgettable travel experience.</p>
+            <ul>
+                <li>Customized holiday packages</li>
+                <li>Train and hotel combo deals</li>
+                <li>Exclusive sightseeing tours in top destinations</li>
+            </ul>
+            <a href="travel_packages.html" class="btn">Explore Packages</a>
+        </div>
+
+        <div class="service-box">
+            <h3>Order food</h3>
+            <p>
+                You can order authentic and delicious food items for your journey.Including Indian,chinese etc...
+            </p>
+            <a href="food.html" class="btn">Make a order</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Train Ticket Booking System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

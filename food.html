@@ -1,0 +1,184 @@
+<!--food.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #ff6600;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #ff9966;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #ff6600;
+        }
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .food-item {
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .food-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .food-item h3 {
+            color: #ff6600;
+            margin: 0.5rem 0;
+        }
+
+        .food-item p {
+            margin: 0.5rem 0;
+            color: #555;
+        }
+
+        .food-item span {
+            font-weight: bold;
+        }
+
+        .order-btn {
+            background-color: #ff6600;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 10px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .order-btn:hover {
+            background-color: #cc5200;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #ff6600;
+            color: white;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Food Ordering System</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="food.html">Order Food</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Our Menu</h2>
+
+        <div class="menu-container">
+            <div class="food-item">
+                <img src="pizza.jpg" alt="Margherita Pizza">
+                <h3>Margherita Pizza</h3>
+                <p>Classic mozzarella cheese and tomato sauce.</p>
+                <p>Price: <span>₹250</span></p>
+                <a href="order-form.html?food=Margherita Pizza" class="order-btn">Order Now</a>
+            </div>
+            <div class="food-item">
+                <img src="biryani.jpg" alt="Chicken Biryani">
+                <h3>Chicken Biryani</h3>
+                <p>Fragrant rice cooked with succulent chicken.</p>
+                <p>Price: <span>₹300</span></p>
+                <a href="order-form.html?food=Chicken Biryani" class="order-btn">Order Now</a>
+            </div>
+            <div class="food-item">
+                <img src="paneer-butter-masala.jpg" alt="Paneer Butter Masala">
+                <h3>Paneer Butter Masala</h3>
+                <p>Creamy tomato curry with soft paneer cubes.</p>
+                <p>Price: <span>₹220</span></p>
+                <a href="order-form.html?food=Paneer Butter Masala" class="order-btn">Order Now</a>
+            </div>
+            <div class="food-item">
+                <img src="chocolate brownies.jpg" alt="Chocolate Brownie">
+                <h3>Chocolate Brownie</h3>
+                <p>Rich and fudgy chocolate brownie.</p>
+                <p>Price: <span>₹150</span></p>
+                <a href="order-form.html?food=Chocolate Brownie" class="order-btn">Order Now</a>
+            </div>
+            <div class="food-item">
+                <img src="Veggie-Burger-H1.webp" alt="Veg Burger">
+                <h3>Veg Burger</h3>
+                <p>Fresh veggies and sauce packed in a bun.</p>
+                <p>Price: <span>₹120</span></p>
+                <a href="order-form.html?food=Veg Burger" class="order-btn">Order Now</a>
+            </div>
+            <div class="food-item">
+                <img src="Mysore-masala-dosa.webp" alt="Masala Dosa">
+                <h3>Masala Dosa</h3>
+                <p>Crispy dosa filled with spicy potato masala.</p>
+                <p>Price: <span>₹100</span></p>
+                <a href="order-form.html?food=Masala Dosa" class="order-btn">Order Now</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Food Ordering System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

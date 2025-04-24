@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Your Ticket</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .ticket {
+            border: 2px dashed #333;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+
+        .ticket h2 {
+            text-align: center;
+        }
+
+        .btns {
+            text-align: center;
+            margin-top: 20px;
+            width: 300px;
+            padding-left: 600px;
+            display: flex;
+        }
+
+        .btns button {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ticket" id="ticket-info">
+        <h2>Train Ticket</h2>
+    </div>
+
+    <div class="btns">
+        <button onclick="window.print()">Print Ticket</button>
+        <button onclick="window.location.href='index.html'">Go to Home</button>
+    </div>
+
+    <script>
+        const ticket = JSON.parse(localStorage.getItem("ticketDetails"));
+
+        if (!ticket) {
+            alert("No ticket data found. Please book a ticket first.");
+            window.location.href = "index.html";
+        } else {
+            // Create unique payment key
+            const paymentKey = `payment_${ticket.trainName}_${ticket.contact}_${ticket.date}`;
+            const isPaid = localStorage.getItem(paymentKey);
+
+            if (isPaid !== "true") {
+                alert("Payment not completed! Redirecting to payment page...");
+                window.location.href = "payment.html";
+            } else {
+                // Show the ticket info
+                document.getElementById("ticket-info").innerHTML += `
+                    <p><strong>Train:</strong> ${ticket.trainName}</p>
+                    <p><strong>From:</strong> ${ticket.from}</p>
+                    <p><strong>To:</strong> ${ticket.to}</p>
+                    <p><strong>Date:</strong> ${ticket.date}</p>
+                    <p><strong>Class:</strong> ${ticket.travelClass}</p>
+                    <hr>
+                    <p><strong>Passenger Name:</strong> ${ticket.passengerName}</p>
+                    <p><strong>Age:</strong> ${ticket.age}</p>
+                    <p><strong>Gender:</strong> ${ticket.gender}</p>
+                    <p><strong>Contact:</strong> ${ticket.contact}</p>
+                    <p><strong>No. of People:</strong> ${ticket.count}</p>
+                    <p><strong>Seat Numbers:</strong> ${ticket.seats ? ticket.seats.join(", ") : "Not Assigned"}</p>
+                `;
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+
+

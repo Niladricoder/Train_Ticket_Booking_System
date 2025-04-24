@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Passenger Details</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        .confirm-btn,
+        .cancel-btn {
+            margin-top: 10px;
+            width: 100px;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Passenger Details</h2>
+    <div id="booking-summary"></div>
+
+    <form id="passenger-form">
+        <div class="form-group">
+            <label for="passenger-name">Passenger Name</label>
+            <input type="text" id="passenger-name" required>
+        </div>
+        <div class="form-group">
+            <label for="passenger-age">Age</label>
+            <input type="number" id="passenger-age" min="1" required>
+        </div>
+        <div class="form-group">
+            <label for="passenger-gender">Gender</label>
+            <select id="passenger-gender" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="passenger-contact">Contact Number</label>
+            <input type="tel" id="passenger-contact" pattern="[0-9]{10}" required>
+        </div>
+        <div class="form-group">
+            <label for="passenger-count">No. of People</label>
+            <input type="number" id="passenger-count" min="1" required>
+        </div>
+        <div class="form-group">
+            <label for="passenger-seat">Seat Number</label>
+            <input type="text" id="passenger-seat" required>
+            <p class="error-message" id="seat-error" style="display: none;">⚠️ This seat is already booked! Choose another.</p>
+        </div>
+        <button type="submit" class="confirm-btn">Submit</button>
+        <button type="button" id="cancel-booking" class="cancel-btn">Cancel</button>
+    </form>
+
+    <script src="passengerJs.js"></script>
+</body>
+
+</html>
